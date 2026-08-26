@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBank Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-university"></i>
+                <span>SecureBank</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="nav-btn" id="loginBtn">Login</button>
+                <button class="nav-btn secondary" id="registerBtn">Register</button>
+                <div class="user-menu" id="userMenu" style="display: none;">
+                    <span id="userEmail"></span>
+                    <button class="nav-btn" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 id="welcomeTitle">Welcome to SecureBank</h1>
+                <p>Your trusted partner in secure banking solutions</p>
+                <div class="hero-buttons">
+                    <button class="btn primary" id="getStartedBtn">Get Started</button>
+                    <button class="btn secondary" id="learnMoreBtn">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="dashboard" style="display: none !important;">
+            <div class="dashboard-container">
+                <h2>Dashboard</h2>
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <h3>Account Details</h3>
+                        <p><strong>Name:</strong> <span id="userName">-</span></p>
+                        <p><strong>Account Number:</strong> <span id="accountNumber">-</span></p>
+                        <p><strong>IFSC Code:</strong> <span id="ifscCode">-</span></p>
+                    </div>
+                    <div class="card">
+                        <h3>Account Balance</h3>
+                        <p class="balance">$12,345.67</p>
+                    </div>
+                    <div class="card">
+                        <h3>Recent Transactions</h3>
+                        <p>No recent transactions</p>
+                    </div>
+                    <div class="card">
+                        <h3>Quick Actions</h3>
+                        <button class="btn primary">Transfer Money</button>
+                        <button class="btn secondary">Pay Bills</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section" style="display: none !important;">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>Online Banking</h3>
+                        <p>Secure 24/7 access to your accounts</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Banking</h3>
+                        <p>Bank on the go with our mobile app</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Security</h3>
+                        <p>Advanced security with 2FA protection</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="section" style="display: none !important;">
+            <div class="container">
+                <h2>About SecureBank</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Your Trusted Banking Partner</h3>
+                        <p>SecureBank has been serving customers for over 50 years with innovative banking solutions and exceptional customer service.</p>
+                        <ul>
+                            <li>✓ Advanced Security Features</li>
+                            <li>✓ 24/7 Customer Support</li>
+                            <li>✓ Mobile & Online Banking</li>
+                            <li>✓ Competitive Interest Rates</li>
+                        </ul>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>1M+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Years of Service</p>
+                        </div>
+                        <div class="stat">
+                            <h3>99.9%</h3>
+                            <p>Uptime</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" style="display: none !important;">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>IILM University Greate Noida<br>Uttar Pradesh 201310</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>support@securebank.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="contact-message">
+                            <p>For inquiries, please call us or visit our office.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login to SecureBank</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn primary full-width">Login</button>
+            </form>
+            <p class="modal-footer">Don't have an account? <a href="#" id="switchToRegister">Register here</a></p>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeRegister">&times;</span>
+            <h2>Register for SecureBank</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerUsername">Username</label>
+                    <input type="text" id="registerUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPhone">Phone Number</label>
+                    <input type="tel" id="registerPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn primary full-width">Register</button>
+            </form>
+            <p class="modal-footer">Already have an account? <a href="#" id="switchToLogin">Login here</a></p>
+        </div>
+    </div>
+
+    <!-- OTP Modal -->
+    <div id="otpModal" class="modal">
+        <div class="modal-content">
+            <h2>Verify OTP</h2>
+            <p>Please enter the 6-digit code sent to your email</p>
+            <form id="otpForm">
+                <div class="form-group">
+                    <label for="otpCode">OTP Code</label>
+                    <input type="text" id="otpCode" maxlength="6" required>
+                </div>
+                <button type="submit" class="btn primary full-width">Verify OTP</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 2FA Setup Modal -->
+    <div id="twoFAModal" class="modal">
+        <div class="modal-content">
+            <h2>QR Authentication Required</h2>
+            <div id="qrCodeContainer">
+                <p>Scan this QR code with your authenticator app (Google Authenticator, Authy, etc.):</p>
+                <div id="qrCode" style="text-align: center; margin: 20px 0;"></div>
+                <p style="font-size: 0.9em; color: #666;">After scanning, enter the 6-digit code from your authenticator app below:</p>
+            </div>
+            <form id="twoFAForm">
+                <div class="form-group">
+                    <label for="twoFACode">Authentication Code</label>
+                    <input type="text" id="twoFACode" maxlength="6" placeholder="000000" required style="text-align: center; font-size: 1.2em; letter-spacing: 0.2em;">
+                </div>
+                <button type="submit" class="btn primary full-width">Verify & Complete Login</button>
+                <button type="button" class="btn secondary full-width" id="skip2FA" style="display: none;">Skip for now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 2FA Verify Modal -->
+    <div id="verify2FAModal" class="modal">
+        <div class="modal-content">
+            <h2>Two-Factor Authentication</h2>
+            <p>Please enter the 6-digit code from your authenticator app</p>
+            <form id="verify2FAForm">
+                <div class="form-group">
+                    <label for="verify2FACode">Authentication Code</label>
+                    <input type="text" id="verify2FACode" maxlength="6" required>
+                </div>
+                <button type="submit" class="btn primary full-width">Verify</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Face Verification Modal -->
+    <div id="faceModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Setup Face Verification</h2>
+            <p>Position your face in the center of the frame.</p>
+            <div class="face-container">
+                <video id="faceVideo" width="320" height="240" autoplay muted></video>
+                <canvas id="faceCanvas" width="320" height="240" style="display: none;"></canvas>
+            </div>
+            <div class="face-buttons">
+                <button type="button" class="btn primary" id="captureFace">Capture & Register</button>
+                <button type="button" class="btn secondary" id="skipFace">Skip for now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Face Verify Modal (for Login) -->
+    <div id="verifyFaceModal" class="modal">
+        <div class="modal-content">
+            <h2>Face Verification</h2>
+            <p>Please look into the camera to verify your identity.</p>
+            <div class="face-container">
+                <video id="verifyFaceVideo" width="320" height="240" autoplay muted></video>
+                <canvas id="verifyFaceCanvas" width="320" height="240" style="display: none;"></canvas>
+            </div>
+            <div class="face-buttons">
+                <button type="button" class="btn primary" id="verifyFaceBtn">Verify My Face</button>
+                <button type="button" class="btn secondary" id="cancelFaceVerify">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
